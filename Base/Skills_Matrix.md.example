@@ -1,0 +1,63 @@
+# Technical & Professional Skills Matrix - [Alex Morgan]
+
+> [!NOTE]
+> Group your skills into accurate proficiency tiers based on real production experience, personal preferences, and genuine skill depth. This matrix guides the match analyst to spot real fits vs friction points.
+
+---
+
+## Tier 1: Core Expertise (Production Proven / High Confidence)
+*Technologies and areas where you can architect frameworks from scratch, lead initiatives, and answer deep technical interview questions:*
+
+| Skill / Technology | Years Used | Confidence (1-5) | Domains Applied | Real Context & Strengths |
+| :--- | :--- | :--- | :--- | :--- |
+| **React (18/19)** | 7+ yrs | 5/5 | SaaS Platforms, E-Commerce | Hooks, concurrent features, server components, render performance |
+| **TypeScript** | 5+ yrs | 5/5 | Enterprise web applications | Generics, strict type safety, type utility libraries, refactoring |
+| **Next.js** | 4+ yrs | 4.5/5 | Enterprise SaaS & Portals | App Router, SSR/SSG, middleware, performance optimization |
+| **State & Data Fetching** | 6+ yrs | 5/5 | Complex dashboards | TanStack React Query, Zustand, Redux Toolkit |
+| **HTML5 & CSS / Tailwind**| 8+ yrs | 5/5 | Design systems, responsive web | Semantic markup, Tailwind CSS, CSS Grid/Flexbox, accessibility (WCAG) |
+| **Frontend Testing** | 5+ yrs | 4.5/5 | Automated CI regression | Jest, React Testing Library, Storybook interaction tests |
+
+---
+
+## Tier 2: Working Knowledge (Solid / Everyday Use)
+*Technologies you have used in production, can build tools with, but may consult docs or use AI assistance for rapid development:*
+
+| Skill / Technology | Years Used | Confidence (1-5) | Notes |
+| :--- | :--- | :--- | :--- |
+| **Playwright / Cypress** | 3+ yrs | 4/5 | End-to-end browser regression testing, CI integration |
+| **Node.js / Express** | 4+ yrs | 3.5/5 | Backend-for-Frontend (BFF) layers, mock servers, utility scripts |
+| **GraphQL** | 3+ yrs | 4/5 | Apollo Client, urql, schema consumption, cache normalization |
+| **Vite & Webpack** | 5+ yrs | 4/5 | Build configurations, asset bundling, plugin authoring, optimization |
+| **CI/CD (GitHub Actions)**| 3+ yrs | 4/5 | Automated test runs, linting, preview deployments (Vercel/Cloudflare) |
+| **Figma / Design Tokens** | 4+ yrs | 4.5/5 | Bridging UI/UX design tokens into code components |
+
+---
+
+## Tier 3: Familiar / Conceptual / Minimal Production Use
+*Technologies understood conceptually or used minimally in past roles or side projects:*
+
+| Skill / Technology | Familiarity | Notes |
+| :--- | :--- | :--- |
+| **React Native** | Intermediate | Built small cross-platform prototypes; understands Expo |
+| **Docker** | Intermediate | Running local containerized development environments |
+| **SQL / PostgreSQL** | Moderate | Basic relational queries and database seeding |
+| **WebSockets** | Moderate | Real-time chat integration in earlier client projects |
+
+---
+
+## Tier 4: Want to Learn / Target Brush-Up Areas
+*Areas to review or study for senior roles:*
+
+- **3D Web Interactive Graphics (Three.js / WebGL / React Three Fiber)**
+- **WebAssembly (Rust/Wasm integration in the browser)**
+- **Advanced Microfrontend Architectures (Module Federation at scale)**
+
+---
+
+## Tier 5: Explicitly AVOID (Deal-Breakers & Drainers)
+*Technologies or roles you do NOT want to work with in your daily stack:*
+
+- **Legacy jQuery / AngularJS (v1.x) / Backbone.js maintenance**
+- **100% monolithic PHP/WordPress theme hacking with no modern build tools**
+- **Roles without dedicated designers where engineers guess UI specs**
+- **Micromanagement or activity-tracking environments**

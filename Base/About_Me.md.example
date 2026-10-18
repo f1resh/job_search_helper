@@ -1,0 +1,64 @@
+# About Me (Candid Profile & Preferences) - [Alex Morgan]
+
+> [!NOTE]
+> This document is strictly for internal matching. It is used by the AI agent to objectively evaluate vacancy fit, spot red flags, and highlight genuine strengths. Fill this out with complete honesty—no resume fluff!
+
+---
+
+## 1. Professional Identity & Core Value
+- **Target Role(s):** Senior Frontend Engineer / Lead React Developer / UI Architect.
+- **Primary Value Proposition:** 8+ years specializing in modern web applications (React, TypeScript, Next.js). Able to step into complex frontends, tame state management chaos, build accessible design systems from scratch, and optimize web performance (Core Web Vitals) for high-traffic products.
+- **Current Location & Work Rights:** London, UK (UK Citizen / Right to work in UK & EU).
+- **Target Work Setup:** Remote (preferred) or Hybrid in London.
+
+---
+
+## 2. Personality, Cognitive Traits & Working Style
+- **Problem Solving Style:** Visual systems thinker. Cares deeply about user experience, clean code modularity, design tokens, and developer ergonomics.
+- **Focus & Pace:** Thrives in autonomous, product-oriented squads where engineering collaborates closely with UI/UX designers and product managers. Prefers shipping iterative improvements over massive risky rewrites.
+- **Communication & Feedback:** Direct, collaborative, and constructive. Strongly prefers async documentation, Figma comments, and clear PR reviews over constant unscheduled meetings.
+- **Interests Outside Work:** Photography, mountain biking, electronic music production, reading books on product design and typography.
+
+---
+
+## 3. What Genuinely Energizes Me (Best Work)
+- Architecting scalable, accessible design systems and component libraries in Storybook.
+- Tackling difficult frontend performance bottlenecks (code-splitting, lazy loading, sub-second LCP/INP scores).
+- Working closely with product designers to turn Figma prototypes into polished, fluid web interactions.
+- Mentoring team members on modern TypeScript patterns, state machines, and testing best practices.
+
+---
+
+## 4. What Drains Me / Deal-Breakers (Immediate "NO")
+- **Absolute Deal-Breakers:**
+  - Toxic blame culture, harsh micromanagement, or activity-tracking software.
+  - Strict 5-days-a-week in-office mandates (remote or flexible hybrid only).
+  - Teams with zero design process where developers are expected to guess UI specs without Figma or user flows.
+- **Things I Prefer to Avoid:**
+  - Maintaining unmaintained legacy jQuery, AngularJS (v1.x), or outdated monolithic CMS stacks with no modernization plan.
+  - Chaotic release processes with zero automated CI testing where hotfixes are pushed directly to production.
+
+---
+
+## 5. Honest Experience Assessment (Reality vs Resume)
+- **True Deep Strengths (Can execute independently & lead):**
+  - React (v18/v19 hooks, concurrent features, server components, render optimization).
+  - TypeScript (generics, mapped types, utility types, strict configuration).
+  - Next.js (App Router, Server-Side Rendering, Static Site Generation, API routes).
+  - Modern State & Data Fetching (TanStack Query, Zustand, Redux Toolkit).
+  - Component Testing (Jest, React Testing Library, Storybook interaction tests).
+- **Working Knowledge / Practical Experience:**
+  - Node.js & Express / NestJS: Can write BFF (Backend-for-Frontend) layers and mock APIs.
+  - GraphQL: Consuming schemas, writing queries and mutations via Apollo/urql.
+  - Docker: Running local development containers.
+- **Known Gaps & Priority Study Areas:**
+  - **3D Web Graphics (Three.js / WebGL):** Understands the basics, but has not built commercial 3D interactive canvases.
+  - **WebAssembly (Wasm):** Conceptual understanding, but minimal hands-on production use.
+
+---
+
+## 6. Financial Targets & Career Objectives
+- **Target Compensation:** £85,000 – £105,000 GBP / year (UK) or $110,000 – $140,000 USD / year (US Remote Contractor).
+- **Minimum Acceptable:** £75,000 GBP / year.
+- **Core Motivation:** Seeking technical leadership opportunities on a modern SaaS product with high design standards and competitive international compensation.
+- **Notice Period / Availability:** 1 month notice.

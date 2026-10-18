@@ -1,0 +1,77 @@
+# Alex Morgan
+
+**Senior Frontend Engineer (React / TypeScript)**  
+**Location:** London, UK (or Remote)  
+**Phone:** +44 20 7946 0192 | **Email:** [alex.morgan@example.com](mailto:alex.morgan@example.com)  
+**LinkedIn:** [linkedin.com/in/alexmorgan](https://linkedin.com) | **GitHub:** [github.com/alexmorgan](https://github.com) | **Portfolio:** [alexmorgan.dev](https://alexmorgan.dev)
+
+---
+
+## Professional Summary
+
+Senior Frontend Engineer with 8+ years of experience specializing in building responsive, accessible, and high-performance web applications using React, TypeScript, and Next.js. Proven track record of architecting component design systems, optimizing Core Web Vitals to sub-second load times, and scaling state architectures across large-scale SaaS platforms. Strong advocate for automated frontend testing, accessibility standards (WCAG 2.1 AA), and close engineering-design collaboration.
+
+---
+
+## Core Competencies
+
+- **Languages:** TypeScript, JavaScript (ES6+), HTML5, CSS3/SCSS, SQL
+- **Frontend Frameworks & Libraries:** React 18/19, Next.js (App Router), Redux Toolkit, Zustand, React Query (TanStack), Tailwind CSS
+- **Testing & Quality:** Jest, React Testing Library, Playwright, Storybook, Lighthouse, MSW (Mock Service Worker)
+- **Tooling & Build Systems:** Vite, Webpack, Turborepo, ESLint, Prettier, PostCSS
+- **Architecture & Practices:** Design Systems, Microfrontends, Server-Side Rendering (SSR/SSG), Responsive Design, Web Accessibility (a11y), REST & GraphQL APIs
+
+---
+
+## Professional Experience
+
+### **Elevate SaaS Platform** – London, UK
+**Senior Frontend Engineer** | *March 2022 – Present*
+
+- Architected and maintained the core enterprise analytics dashboard using `React`, `TypeScript`, and `Next.js`, serving over 150k monthly active business users.
+- Redesigned data fetching and client-side caching strategy utilizing `TanStack React Query`, reducing server request volume by 42% and eliminating UI layout shifts.
+- Engineered an internal reusable UI component library packaged with `Storybook` and `Tailwind CSS`, accelerating feature delivery across 4 cross-functional product teams.
+- Optimized frontend bundle sizes and code-splitting boundaries, improving Google Lighthouse Performance scores from 68 to 94 and cutting Largest Contentful Paint (LCP) from 3.2s to 1.1s.
+- Led migration of legacy JavaScript components to strict `TypeScript`, increasing type safety and reducing runtime UI errors by 35%.
+- Mentored 4 mid-level and junior frontend developers through regular code reviews, technical pair programming, and architectural RFC discussions.
+- *Tech stack:* React, TypeScript, Next.js, Zustand, Tailwind CSS, Storybook, Jest, Vite, Git
+
+---
+
+### **Nova Digital Agency** – Bristol, UK
+**Frontend Developer** | *July 2018 – February 2022*
+
+- Developed high-traffic web applications and e-commerce client experiences utilizing `React`, `Redux`, and modern CSS-in-JS tooling.
+- Built accessible, responsive user interfaces compliant with WCAG 2.1 AA accessibility guidelines, passing third-party accessibility audits.
+- Implemented comprehensive automated unit and integration test suites using `Jest` and `React Testing Library`, reaching 85% component test coverage.
+- Integrated RESTful backend services and GraphQL endpoints, handling complex form state validation and client-side error boundaries.
+- *Tech stack:* React, JavaScript/TypeScript, Redux Toolkit, SCSS, React Testing Library, GraphQL, Webpack
+
+---
+
+## Key Projects
+
+### **FastUI Component System** | [github.com/alexmorgan/fast-ui](https://github.com)
+- Open-source, headless React component library built with accessibility and zero-runtime CSS in mind.
+- Implemented keyboard navigation, ARIA live regions, and automated visual regression testing via Playwright.
+- *Tech stack:* React, TypeScript, Tailwind CSS, Playwright, Storybook
+
+---
+
+## Education
+
+**B.Sc. in Computer Science**  
+*University of Bristol* | *Graduation: 2018*
+
+---
+
+## Certifications
+
+- **Meta Front-End Developer Professional Certificate** (2022)
+
+---
+
+## Languages
+
+- **English:** Native proficiency
+- **German:** Conversational (B1)

@@ -1,0 +1,19 @@
+# Raw Biography Example - Free-Form Background Story
+
+*This is an example showing how you can write your background in free-form narrative. Write naturally, in bullet points or paragraphs, without worrying about resume formatting. The more honest and detailed you are, the better the AI can calibrate your profile.*
+
+---
+
+## Example Narrative (React Frontend Developer):
+
+I got into computers during secondary school when I started playing around with HTML, CSS, and basic JavaScript to build fan sites for my favorite bands. In university, I studied Computer Science and graduated in 2018. During my final two years, I did freelance web design and front-end development for local businesses using vanilla JavaScript and modern CSS.
+
+After graduation, I joined Nova Digital Agency in Bristol as a Junior Frontend Developer. I worked there for about 3.5 years. At first, I was converting Photoshop/Figma designs into responsive HTML/CSS templates, but we quickly moved into React and Redux as clients demanded single-page applications. I got very comfortable with component architectures, Jest unit testing, accessibility (WCAG), and responsive layouts. By the time I left, I was mentoring two new grads.
+
+In 2022, I joined Elevate SaaS as a Senior Frontend Engineer. It was a big step up in technical complexity: a large enterprise analytics platform with hundreds of thousands of active users. The codebase had a lot of technical debt, so I led the migration from old class components to TypeScript and Next.js (App Router). I also introduced TanStack Query to eliminate messy Redux boilerplate for server state, which made our apps way faster. I built our internal Storybook design system alongside our UI/UX team.
+
+Work style & personality: I am a visual thinker and I care a lot about polish, clean UI, and developer experience. I like working in autonomous teams where designers and engineers speak the same language. I don't like heavy corporate politics or micromanagement. I hate when managers expect developers to "just guess" the design without specs or user flows.
+
+Interests outside work: Photography, gravel biking, synthesizers, and reading books on typography and graphic design.
+
+Financial motivation: Currently earning around £65k/year in the UK, but looking for a senior/lead role paying £85k-£105k (or US remote contracting at $110k-$140k) so I can save up for a house deposit.
