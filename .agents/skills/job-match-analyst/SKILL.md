@@ -64,8 +64,18 @@ Read the current profile files from `d:\JobSearch\Base\`:
 
 ---
 
-### Step 4: Create Vacancy Directory & Output Files
+### Step 3b: Deal‑breaker / Red‑flag Confirmation
+- If any **Honest Cons & Red Flags** were identified above, pause the workflow.
+- Present the list of red flags to the user and ask for explicit confirmation to continue.
+- Only proceed to the next steps if the user replies with a clear affirmative (e.g., “yes, continue”).
 
+### Step 4a: Duplicate Vacancy Check
+- Compute the target folder path as described in Step 4.
+- If the folder already exists, do **not** overwrite.
+- Respond to the user: "A vacancy folder for this role/company/date already exists. Do you want to (a) abort, (b) create a new dated folder, or (c) overwrite?".
+- Proceed based on the user’s explicit choice.
+
+### Step 4: Create Vacancy Directory & Output Files
 Determine target folder inside `Vacancies/`:
 - If region is identifiable (e.g. US, EU, UK, Remote), organize under `Vacancies/<Region>/<YYYY-MM-DD>_<Company>_<Role_Slug>/`. Otherwise, use `Vacancies/<YYYY-MM-DD>_<Company>_<Role_Slug>/`.
 - Create the folder and generate the following 4 files:
