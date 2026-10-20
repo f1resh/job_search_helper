@@ -26,6 +26,25 @@ This skill guides the agent through an end-to-end evaluation of a job vacancy ag
    - **Nice-to-haves / Bonus skills:** Secondary tools, domain knowledge.
    - **Key Responsibilities:** What the day-to-day work actually involves.
    - **Compensation / Benefits:** Salary range, equity, bonus (if stated).
+   - **Eligibility Signals:** Work authorization or sponsorship statements, residency or "must be located in" limits, employment type (employee / W-2 / contractor / B2B / EOR), mentions of Deel, Remote.com, Oyster or similar, and the employer type (public / government-affiliated, regulated industry).
+
+---
+
+### Step 1b: Eligibility Pre-check
+
+Before any fit analysis, check whether the employer can realistically hire the candidate. Read the candidate's location, work rights and contracting setup from [`Base/About_Me.md`](file:///d:/JobSearch/Base/About_Me.md), then sort the vacancy into one bucket:
+
+| Bucket | Typical signals | What to do |
+| :--- | :--- | :--- |
+| **Ineligible** | "Must be authorized to work in [country]", "no sponsorship", residency or "must be located in" a country or state the candidate is not in; public or government-affiliated employer; regulated data (healthcare, insurance, banking, defense) where workers must be in-country | **Short path.** Present the blocking signals in chat and ask whether to stop or run the full analysis anyway. If stopping, save only `job_description.md` and a short `match_report.md` (eligibility verdict, blocking signals, a quick technical-fit note), with no tailored CV or study guide |
+| **Unclear** | Location says "Remote" or names a city, with no statement on authorization, residency or contractors | **Full path**, with eligibility listed as a red flag. The match report starts with an action: ask the recruiter or hiring manager before applying (draft the message; see below) |
+| **Open** | "Remote – worldwide / EMEA / Europe / anywhere", "contractor", "B2B", EOR providers named, time-zone ranges that include the candidate | **Full path.** Mark the vacancy **Priority** in the match report and chat summary |
+
+**Rules:**
+- Quote the exact phrases that decided the bucket. If the page says nothing, write "not stated". Do not guess an employer's policy; label anything inferred (e.g. from the employer type) as inferred.
+- Never suggest misrepresenting work authorization on application forms.
+- For **Unclear** vacancies, include a ready-to-send recruiter message that states the candidate's location, available working hours and contracting options (own entity or the company's EOR), and asks whether the role is open to that. Do not lead with a lower-cost pitch; mention rate flexibility only if the employer raises budget.
+- Niche domain expertise (where the candidate's background is rare) raises the chance that an **Unclear** employer makes an exception; say so when it applies.
 
 ---
 
@@ -85,6 +104,7 @@ Contains clean capture of the job listing, metadata (date, URL, company, title, 
 
 #### 2. `match_report.md`
 A structured report with:
+- **Eligibility** (Ineligible / Unclear / Open from Step 1b), the deciding phrases from the posting, and the recruiter message for **Unclear**
 - **Executive Summary & Verdict** (Apply / Caution / Skip)
 - **Match Score & Rating Breakdown**
 - **Pros & Cons Analysis**
@@ -136,7 +156,7 @@ Formulate **2–4 targeted clarifying questions** for the candidate based on the
 ### Step 7: Deliver Response to User
 
 Provide a clean, well-formatted response in chat:
-1. **Quick Snapshot:** Job Title, Company, Match Score (`XX% - Rating`), Recommendation (Apply / Stretch / Skip).
+1. **Quick Snapshot:** Job Title, Company, Eligibility bucket (Ineligible / Unclear / Open, with **Priority** for Open), Match Score (`XX% - Rating`), Recommendation (Apply / Stretch / Skip).
 2. **Top 3 Pros & Top 2 Cons / Caveats.**
 3. **Key Study Highlights:** What must be learned or brushed up on immediately.
 4. **Targeted Follow-up Questions:** Present the 2–4 calibration questions from Step 6 to gather deeper context and offer to refine the CV based on the answers.

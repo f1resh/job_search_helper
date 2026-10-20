@@ -23,6 +23,7 @@ This workspace is a specialized assistant system for evaluating job vacancies, v
 3. **When the User Shares a Vacancy Link or Text:**
    - Activate the [`job-match-analyst`](file:///d:/JobSearch/.claude/skills/job-match-analyst/SKILL.md) skill workflow.
    - Fetch the URL content or process the job text.
+   - Run the eligibility pre-check (Ineligible / Unclear / Open) before the fit analysis; for Ineligible vacancies, ask before doing the full package.
    - Evaluate match percentage and honest pros/cons.
    - Create a dedicated folder under `Vacancies/<Region>/<YYYY-MM-DD>_<Company>_<Role>/` (e.g., `Vacancies/US/2026-10-18_Company_Role/`).
    - Generate:
