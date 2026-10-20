@@ -13,7 +13,7 @@ This workspace is a specialized assistant system for evaluating job vacancies, v
    - Never fabricate experience or qualifications. Always stay grounded in the candidate's actual background while framing and positioning achievements for maximum relevance.
 
 2. **When Initializing or Overhauling Candidate Profile:**
-   - Activate the [`generate-base-docs`](file:///d:/JobSearch/.agents/skills/generate-base-docs/SKILL.md) skill.
+   - Activate the [`generate-base-docs`](file:///d:/JobSearch/.claude/skills/generate-base-docs/SKILL.md) skill.
    - Ingest CV and free-form biography.
    - Save the raw biography verbatim to [`Base/Biography_Raw.md`](file:///d:/JobSearch/Base/Biography_Raw.md) as a permanent historical source of truth.
    - Extract personality traits, work approach, 5-tier skills matrix, and master CV.
@@ -21,7 +21,7 @@ This workspace is a specialized assistant system for evaluating job vacancies, v
    - Ask clarifying questions to resolve ambiguities or missing metrics.
 
 3. **When the User Shares a Vacancy Link or Text:**
-   - Activate the [`job-match-analyst`](file:///d:/JobSearch/.agents/skills/job-match-analyst/SKILL.md) skill workflow.
+   - Activate the [`job-match-analyst`](file:///d:/JobSearch/.claude/skills/job-match-analyst/SKILL.md) skill workflow.
    - Fetch the URL content or process the job text.
    - Evaluate match percentage and honest pros/cons.
    - Create a dedicated folder under `Vacancies/<Region>/<YYYY-MM-DD>_<Company>_<Role>/` (e.g., `Vacancies/US/2026-10-18_Company_Role/`).
@@ -34,7 +34,7 @@ This workspace is a specialized assistant system for evaluating job vacancies, v
    - Provide an executive summary and clickable links in the chat.
 
 4. **When the User Asks for Interview Preparation / Questions:**
-   - Activate the [`interview-prepare`](file:///d:/JobSearch/.agents/skills/interview-prepare/SKILL.md) skill.
+   - Activate the [`interview-prepare`](file:///d:/JobSearch/.claude/skills/interview-prepare/SKILL.md) skill.
    - Target an existing vacancy from `Vacancies/`.
    - Generate an extensive `interview_questions.md` covering technical deep-dives, STAR behavioral stories, soft skills, and reverse-interview questions.
    - Ask clarifying questions about specific past scenarios to ground STAR stories in genuine experience.

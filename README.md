@@ -30,7 +30,7 @@ d:\JobSearch\
 │           ├── study_guide.md
 │           └── interview_questions.md
 │
-├── .agents\
+├── .claude\
 │   └── skills\
 │       ├── generate-base-docs\
 │       │   └── SKILL.md          # Profile onboarding: extracts base profile from CV + raw bio
