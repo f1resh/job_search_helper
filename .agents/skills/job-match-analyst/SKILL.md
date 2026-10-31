@@ -15,7 +15,8 @@ This skill guides the agent through an end-to-end evaluation of a job vacancy ag
 ### Step 1: Ingest & Parse the Vacancy
 
 1. **If a URL is provided:**
-   - Call `read_url_content` with the provided URL.
+   - Fetch the page with the web or browser tool available in your environment. If a plain fetch returns an empty or summarized page (JavaScript-rendered sites), use a browser tool to read the full text.
+   - If the URL is a job aggregator (e.g. Remotive, Jooble), open the employer's original posting via its Apply link: aggregators sometimes add location tags (such as "Worldwide") that the employer never stated.
    - If the page is blocked by authentication (e.g., LinkedIn login wall, Cloudflare challenge, or CAPTCHA):
      - Politely notify the user and ask them to copy-paste the text of the job description or main requirements directly in the chat.
 2. **Extract key vacancy parameters:**
@@ -26,15 +27,34 @@ This skill guides the agent through an end-to-end evaluation of a job vacancy ag
    - **Nice-to-haves / Bonus skills:** Secondary tools, domain knowledge.
    - **Key Responsibilities:** What the day-to-day work actually involves.
    - **Compensation / Benefits:** Salary range, equity, bonus (if stated).
+   - **Eligibility Signals:** Work authorization or sponsorship statements, residency or "must be located in" limits, employment type (employee / W-2 / contractor / B2B / EOR), mentions of Deel, Remote.com, Oyster or similar, and the employer type (public / government-affiliated, regulated industry).
+
+---
+
+### Step 1b: Eligibility Pre-check
+
+Before any fit analysis, check whether the employer can realistically hire the candidate. Read the candidate's location, work rights and contracting setup from `Base/About_Me.md`, then sort the vacancy into one bucket:
+
+| Bucket | Typical signals | What to do |
+| :--- | :--- | :--- |
+| **Ineligible** | "Must be authorized to work in [country]", "no sponsorship", residency or "must be located in" a country or state the candidate is not in; public or government-affiliated employer; regulated data (healthcare, insurance, banking, defense) where workers must be in-country | **Short path.** Present the blocking signals in chat and ask whether to stop or run the full analysis anyway. If stopping, save only `job_description.md` and a short `match_report.md` (eligibility verdict, blocking signals, a quick technical-fit note), with no tailored CV or study guide |
+| **Unclear** | Location says "Remote" or names a city, with no statement on authorization, residency or contractors | **Full path**, with eligibility listed as a red flag. The match report starts with an action: ask the recruiter or hiring manager before applying (draft the message; see below) |
+| **Open** | "Remote – worldwide / EMEA / Europe / anywhere", "contractor", "B2B", EOR providers named, time-zone ranges that include the candidate | **Full path.** Mark the vacancy **Priority** in the match report and chat summary |
+
+**Rules:**
+- Quote the exact phrases that decided the bucket. If the page says nothing, write "not stated". Do not guess an employer's policy; label anything inferred (e.g. from the employer type) as inferred.
+- Never suggest misrepresenting work authorization on application forms.
+- For **Unclear** vacancies, include a ready-to-send recruiter message that states the candidate's location, available working hours and contracting options (own entity or the company's EOR), and asks whether the role is open to that. Do not lead with a lower-cost pitch; mention rate flexibility only if the employer raises budget.
+- Niche domain expertise (where the candidate's background is rare) raises the chance that an **Unclear** employer makes an exception; say so when it applies.
 
 ---
 
 ### Step 2: Ingest the Candidate Profile from `Base/`
 
-Read the current profile files from `d:\JobSearch\Base\`:
-1. **[`Base/CV_Base.md`](file:///d:/JobSearch/Base/CV_Base.md)**: Master career history, achievements, and facts.
-2. **[`Base/About_Me.md`](file:///d:/JobSearch/Base/About_Me.md)**: Candid personality, preferred pace, energizers, deal-breakers, and honest self-assessment.
-3. **[`Base/Skills_Matrix.md`](file:///d:/JobSearch/Base/Skills_Matrix.md)**: Proficiency tiers (Tier 1 Core, Tier 2 Working, Tier 3 Familiar, Tier 4 Want to Learn, Tier 5 Do Not Want).
+Read the current profile files from `Base/`:
+1. **`Base/CV_Base.md`**: Master career history, achievements, and facts.
+2. **`Base/About_Me.md`**: Candid personality, preferred pace, energizers, deal-breakers, and honest self-assessment.
+3. **`Base/Skills_Matrix.md`**: Proficiency tiers (Tier 1 Core, Tier 2 Working, Tier 3 Familiar, Tier 4 Want to Learn, Tier 5 Do Not Want).
 
 > [!IMPORTANT]
 > **Ground Rule of Truth:** Never fabricate experience, qualifications, or roles that the candidate does not possess. Tailoring means highlighting real relevant achievements, re-ordering emphasis, aligning vocabulary to the company's tech terminology, and framing projects accurately.
@@ -85,6 +105,7 @@ Contains clean capture of the job listing, metadata (date, URL, company, title, 
 
 #### 2. `match_report.md`
 A structured report with:
+- **Eligibility** (Ineligible / Unclear / Open from Step 1b), the deciding phrases from the posting, and the recruiter message for **Unclear**
 - **Executive Summary & Verdict** (Apply / Caution / Skip)
 - **Match Score & Rating Breakdown**
 - **Pros & Cons Analysis**
@@ -136,13 +157,13 @@ Formulate **2–4 targeted clarifying questions** for the candidate based on the
 ### Step 7: Deliver Response to User
 
 Provide a clean, well-formatted response in chat:
-1. **Quick Snapshot:** Job Title, Company, Match Score (`XX% - Rating`), Recommendation (Apply / Stretch / Skip).
+1. **Quick Snapshot:** Job Title, Company, Eligibility bucket (Ineligible / Unclear / Open, with **Priority** for Open), Match Score (`XX% - Rating`), Recommendation (Apply / Stretch / Skip).
 2. **Top 3 Pros & Top 2 Cons / Caveats.**
 3. **Key Study Highlights:** What must be learned or brushed up on immediately.
 4. **Targeted Follow-up Questions:** Present the 2–4 calibration questions from Step 6 to gather deeper context and offer to refine the CV based on the answers.
-5. **Clickable Links:**
-   - [`match_report.md`](file:///path/to/match_report.md)
-   - [`tailored_cv.md`](file:///path/to/tailored_cv.md)
-   - [`tailored_cv.pdf`](file:///path/to/tailored_cv.pdf)
-   - [`study_guide.md`](file:///path/to/study_guide.md)
-   - [`job_description.md`](file:///path/to/job_description.md)
+5. **Links to the generated files** (as clickable links, in whatever link format your chat client supports):
+   - `match_report.md`
+   - `tailored_cv.md`
+   - `tailored_cv.pdf`
+   - `study_guide.md`
+   - `job_description.md`

@@ -27,3 +27,15 @@ Converts Markdown CVs and reports into clean, modern, ATS-friendly PDFs using he
   Scripts\convert_to_pdf.bat Vacancies\US\Google_Senior_Backend\tailored_cv.md
   ```
 - Or drag-and-drop any `.md` file in Windows File Explorer directly onto `convert_to_pdf.bat`.
+
+### 3. `sync_skills.py` (Skills Sync)
+`.agents/skills/` is the single source of truth for the agent skills. Claude Code only discovers skills in `.claude/skills/`, so this script mirrors the source there: it copies new and changed files and removes files that were deleted from the source.
+
+#### Usage via Terminal:
+```powershell
+# Copy changes from .agents/skills to .claude/skills
+.\.venv\Scripts\python.exe Scripts\sync_skills.py
+
+# Only report differences (exit code 1 if out of sync)
+.\.venv\Scripts\python.exe Scripts\sync_skills.py --check
+```
