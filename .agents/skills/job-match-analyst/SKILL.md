@@ -15,7 +15,8 @@ This skill guides the agent through an end-to-end evaluation of a job vacancy ag
 ### Step 1: Ingest & Parse the Vacancy
 
 1. **If a URL is provided:**
-   - Call `read_url_content` with the provided URL.
+   - Fetch the page with the web or browser tool available in your environment. If a plain fetch returns an empty or summarized page (JavaScript-rendered sites), use a browser tool to read the full text.
+   - If the URL is a job aggregator (e.g. Remotive, Jooble), open the employer's original posting via its Apply link: aggregators sometimes add location tags (such as "Worldwide") that the employer never stated.
    - If the page is blocked by authentication (e.g., LinkedIn login wall, Cloudflare challenge, or CAPTCHA):
      - Politely notify the user and ask them to copy-paste the text of the job description or main requirements directly in the chat.
 2. **Extract key vacancy parameters:**
@@ -32,7 +33,7 @@ This skill guides the agent through an end-to-end evaluation of a job vacancy ag
 
 ### Step 1b: Eligibility Pre-check
 
-Before any fit analysis, check whether the employer can realistically hire the candidate. Read the candidate's location, work rights and contracting setup from [`Base/About_Me.md`](file:///d:/JobSearch/Base/About_Me.md), then sort the vacancy into one bucket:
+Before any fit analysis, check whether the employer can realistically hire the candidate. Read the candidate's location, work rights and contracting setup from `Base/About_Me.md`, then sort the vacancy into one bucket:
 
 | Bucket | Typical signals | What to do |
 | :--- | :--- | :--- |
@@ -50,10 +51,10 @@ Before any fit analysis, check whether the employer can realistically hire the c
 
 ### Step 2: Ingest the Candidate Profile from `Base/`
 
-Read the current profile files from `d:\JobSearch\Base\`:
-1. **[`Base/CV_Base.md`](file:///d:/JobSearch/Base/CV_Base.md)**: Master career history, achievements, and facts.
-2. **[`Base/About_Me.md`](file:///d:/JobSearch/Base/About_Me.md)**: Candid personality, preferred pace, energizers, deal-breakers, and honest self-assessment.
-3. **[`Base/Skills_Matrix.md`](file:///d:/JobSearch/Base/Skills_Matrix.md)**: Proficiency tiers (Tier 1 Core, Tier 2 Working, Tier 3 Familiar, Tier 4 Want to Learn, Tier 5 Do Not Want).
+Read the current profile files from `Base/`:
+1. **`Base/CV_Base.md`**: Master career history, achievements, and facts.
+2. **`Base/About_Me.md`**: Candid personality, preferred pace, energizers, deal-breakers, and honest self-assessment.
+3. **`Base/Skills_Matrix.md`**: Proficiency tiers (Tier 1 Core, Tier 2 Working, Tier 3 Familiar, Tier 4 Want to Learn, Tier 5 Do Not Want).
 
 > [!IMPORTANT]
 > **Ground Rule of Truth:** Never fabricate experience, qualifications, or roles that the candidate does not possess. Tailoring means highlighting real relevant achievements, re-ordering emphasis, aligning vocabulary to the company's tech terminology, and framing projects accurately.
@@ -160,9 +161,9 @@ Provide a clean, well-formatted response in chat:
 2. **Top 3 Pros & Top 2 Cons / Caveats.**
 3. **Key Study Highlights:** What must be learned or brushed up on immediately.
 4. **Targeted Follow-up Questions:** Present the 2–4 calibration questions from Step 6 to gather deeper context and offer to refine the CV based on the answers.
-5. **Clickable Links:**
-   - [`match_report.md`](file:///path/to/match_report.md)
-   - [`tailored_cv.md`](file:///path/to/tailored_cv.md)
-   - [`tailored_cv.pdf`](file:///path/to/tailored_cv.pdf)
-   - [`study_guide.md`](file:///path/to/study_guide.md)
-   - [`job_description.md`](file:///path/to/job_description.md)
+5. **Links to the generated files** (as clickable links, in whatever link format your chat client supports):
+   - `match_report.md`
+   - `tailored_cv.md`
+   - `tailored_cv.pdf`
+   - `study_guide.md`
+   - `job_description.md`

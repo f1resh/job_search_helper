@@ -18,7 +18,8 @@ d:\JobSearch\
 ├── Scripts\                      # Automation & Utilities
 │   ├── README.md                 # Script instructions
 │   ├── md_to_pdf.py              # ATS-friendly Markdown-to-PDF converter (Chrome headless)
-│   └── convert_to_pdf.bat        # Windows quick runner / drag-and-drop batch script
+│   ├── convert_to_pdf.bat        # Windows quick runner / drag-and-drop batch script
+│   └── sync_skills.py            # Mirrors .agents\skills into .claude\skills
 │
 ├── Vacancies\                    # Organized vacancy analyses
 │   └── <Region>\                 # (e.g. US, EU, Remote)
@@ -30,7 +31,7 @@ d:\JobSearch\
 │           ├── study_guide.md
 │           └── interview_questions.md
 │
-├── .claude\
+├── .agents\                      # Skills: single source of truth (edit here)
 │   └── skills\
 │       ├── generate-base-docs\
 │       │   └── SKILL.md          # Profile onboarding: extracts base profile from CV + raw bio
@@ -38,6 +39,9 @@ d:\JobSearch\
 │       │   └── SKILL.md          # Vacancy evaluation, fit scoring & tailored CV/PDF generation
 │       └── interview-prepare\
 │           └── SKILL.md          # Comprehensive interview question bank & STAR story prep
+│
+├── .claude\
+│   └── skills\                   # Generated copy of .agents\skills for Claude Code (do not edit)
 │
 ├── .venv\                        # Virtual environment (Python 3.13)
 ├── requirements.txt              # Dependencies (markdown, beautifulsoup4, requests)
@@ -121,3 +125,8 @@ d:\JobSearch\
 
 - **`Scripts/md_to_pdf.py`**: Converts any Markdown CV or report to an ATS-friendly PDF using headless Google Chrome (`C:\Program Files\Google\Chrome\Application\chrome.exe`).
 - **`Scripts/convert_to_pdf.bat`**: Windows drag-and-drop batch runner. Drag any `.md` file onto this batch file in File Explorer to produce a `.pdf`.
+- **`Scripts/sync_skills.py`**: Mirrors the skills from `.agents/skills/` (the single source of truth, read by generic agents) into `.claude/skills/` (where Claude Code discovers them). Edit skills only in `.agents/skills/`, then run:
+  ```powershell
+  .\.venv\Scripts\python.exe Scripts\sync_skills.py          # copy changes
+  .\.venv\Scripts\python.exe Scripts\sync_skills.py --check  # report differences, exit 1 if out of sync
+  ```

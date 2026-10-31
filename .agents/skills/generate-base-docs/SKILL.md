@@ -6,7 +6,7 @@ description: >-
 
 # Generate Base Documents Skill
 
-This skill automates the onboarding process for a new candidate by ingesting their raw biography narrative and existing CV, extracting deep psychological and professional insights, and generating the foundational profile files in [`Base/`](file:///d:/JobSearch/Base/).
+This skill automates the onboarding process for a new candidate by ingesting their raw biography narrative and existing CV, extracting deep psychological and professional insights, and generating the foundational profile files in `Base/`.
 
 ---
 
@@ -25,7 +25,7 @@ Activate this skill when:
 1. **Raw Biography Narrative:**
    - Ingest candidate biography provided either as text in the chat prompt or as a file.
 2. **Existing CV / Resume:**
-   - If a PDF file is present in `Base/` (e.g. `Base/*.pdf`), inspect and read its text using `view_file`.
+   - If a PDF file is present in `Base/` (e.g. `Base/*.pdf`), read its text with your environment's file-reading tool.
    - If text or Markdown is pasted, parse its chronological work history, education, and credentials.
 
 ---
@@ -59,13 +59,13 @@ Thoroughly analyze both sources to extract:
 
 Write the following four structured files into `Base/`:
 
-1. **[`Base/Biography_Raw.md`](file:///d:/JobSearch/Base/Biography_Raw.md)**:
+1. **`Base/Biography_Raw.md`**:
    - A verbatim copy of the raw candidate biography (especially when provided as prompt text in the chat rather than an existing file) to ensure the original narrative is permanently preserved as a historical source of truth.
-2. **[`Base/About_Me.md`](file:///d:/JobSearch/Base/About_Me.md)**:
+2. **`Base/About_Me.md`**:
    - Grounded candid profile capturing cognitive traits, energizers, deal-breakers, real depth vs shallow areas, and career goals.
-3. **[`Base/Skills_Matrix.md`](file:///d:/JobSearch/Base/Skills_Matrix.md)**:
+3. **`Base/Skills_Matrix.md`**:
    - 5-tier technical and professional matrix with years of experience, confidence scores, and real-world project context.
-4. **[`Base/CV_Base.md`](file:///d:/JobSearch/Base/CV_Base.md)**:
+4. **`Base/CV_Base.md`**:
    - Comprehensive master resume capturing all roles, quantified achievements (metrics, scale, cycle time reductions), developer tools built, teaching/mentoring, education, and languages.
 
 ---
@@ -76,7 +76,7 @@ Compile the Markdown CV to a clean, ATS-friendly PDF:
 ```powershell
 .\.venv\Scripts\python.exe Scripts\md_to_pdf.py Base\CV_Base.md Base\CV_Base.pdf
 ```
-Verify via `view_file` that the resulting PDF renders cleanly without orphan page spills.
+Open the resulting PDF (with your file-reading tool, if it can render PDFs) and verify that it renders cleanly without orphan page spills.
 
 ---
 

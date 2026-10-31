@@ -23,7 +23,7 @@ Activate this skill when:
 ### Step 1: Identify the Target Vacancy
 
 1. **Locate the vacancy folder in `Vacancies/`:**
-   - Scan `d:\JobSearch\Vacancies\` (including regional subfolders like `US/`, `EU/`, etc.).
+   - Scan `Vacancies/` (including regional subfolders like `US/`, `EU/`, etc.).
    - If the user specifies the company or role (e.g., "Stripe" or "Frontend Lead at Acme"), match it against folder names.
    - If ambiguous or not specified:
      - List available vacancy folders found in `Vacancies/` with their dates/titles.
@@ -38,9 +38,9 @@ Activate this skill when:
 ### Step 2: Read Candidate Ground Truth from `Base/`
 
 Read:
-- **[`Base/CV_Base.md`](file:///d:/JobSearch/Base/CV_Base.md)**: Full project and achievement history (used to craft realistic STAR stories).
-- **[`Base/About_Me.md`](file:///d:/JobSearch/Base/About_Me.md)**: Candid personality, work style, genuine strengths, imposter/brush-up areas.
-- **[`Base/Skills_Matrix.md`](file:///d:/JobSearch/Base/Skills_Matrix.md)**: Proficiency tiers for technical accuracy.
+- **`Base/CV_Base.md`**: Full project and achievement history (used to craft realistic STAR stories).
+- **`Base/About_Me.md`**: Candid personality, work style, genuine strengths, imposter/brush-up areas.
+- **`Base/Skills_Matrix.md`**: Proficiency tiers for technical accuracy.
 
 ---
 
@@ -123,4 +123,4 @@ Output a clear summary in chat:
 2. Breakdown of the key themes covered in the preparation guide.
 3. Top 3 highest-probability questions the candidate must master for this role.
 4. **Targeted Follow-up Questions:** Present the 2–3 calibration questions from Step 5 to gather real stories and sharpen the STAR responses.
-5. Direct clickable link to the generated [`interview_questions.md`](file:///path/to/interview_questions.md) file.
+5. A clickable link to the generated `interview_questions.md` file (in whatever link format your chat client supports).
